@@ -11,6 +11,7 @@ coverage
 
 # Transpiled files
 lib/
+typings/
 
 # VS Code
 .vscode
