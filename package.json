@@ -6,28 +6,34 @@
   "engines": {
     "node": ">= 8.9.0"
   },
+  "main": "lib/asyncIterators.js",
   "devDependencies": {
     "@types/jest": "~22.1.1",
     "@types/node": "~8.5.10",
+    "barrelsby": "0.0.8",
     "jest": "~22.1.4",
     "rimraf": "~2.6.2",
     "tslint": "~5.9.1",
     "tslint-microsoft-contrib": "~5.0.2",
     "tsutils": "~2.21.0",
+    "typedoc": "^0.10.0",
     "typescript": "~2.7.1"
   },
   "scripts": {
     "clean": "rimraf coverage build tmp",
+    "prebuild": "npm run doc",
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "pretest": "npm run lint",
     "test": "npm run test-only",
     "test-only": "jest --coverage",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "generate-barrels": "barrelsby --delete -d src/",
+    "doc": "npx typedoc src/ --out doc/"
   },
   "author": "Ale Figueroa  <me@ale.world>",
-  "license": "APLv2",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/yknx4/async-iterators.git"
