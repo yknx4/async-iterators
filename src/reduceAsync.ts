@@ -25,13 +25,13 @@
  */
 async function reduceAsync(
   array: any[],
-  fn: Function,
+  iteratee: Function,
   accumulator?: any,
 ): Promise<any> {
   let result = accumulator || array[0];
   const length = array.length;
   for (var index = 0; index < length; index += 1) {
-    result = await fn(result, array[index], index, array);
+    result = await iteratee(result, array[index], index, array);
   }
 
   return result;
