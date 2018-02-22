@@ -25,7 +25,7 @@
   "scripts": {
     "precommit": "lint-staged",
     "clean": "rimraf coverage build tmp",
-    "prebuild": "npm run doc",
+    "prebuild": "npm run generate-barrels && npm run doc",
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
