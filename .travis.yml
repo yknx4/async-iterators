@@ -1,7 +1,10 @@
 language: node_js
 node_js:
-- '8.9'
-- node
+- "lts/*"
+- "node"
+cache:
+  directories:
+    - "node_modules"
 deploy:
   provider: npm
   email: yknx.4.b@gmail.com
@@ -10,3 +13,10 @@ deploy:
   on:
     tags: true
     repo: yknx4/async-iterators
+before_install:
+    - "npm install -g npm"
+install:
+    - npm install
+script:
+    - npm run clean
+    - npm test
