@@ -17,9 +17,9 @@
  * })
  * // => Logs `4` then `2`.
  */
-async function eachRightAsync(array: any[], fn: Function): Promise<void> {
+async function eachRightAsync(array: any[], iteratee: Function): Promise<void> {
   for (var index = array.length - 1; index >= 0; index -= 1) {
-    await fn(array[index], index, array);
+    await iteratee(array[index], index, array);
   }
 }
 export { eachRightAsync };

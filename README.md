@@ -31,7 +31,7 @@ npm install --save async-function-iterators
 
 ## Docs
 
-### Index
+### Index 
 
 * [eachAsync](#eachasync)
 * [eachRightAsync](#eachrightasync)
@@ -48,7 +48,7 @@ npm install --save async-function-iterators
 
 ###  eachAsync
 
-► **eachAsync**(array: *`any`[]*, fn: *`Function`*): `Promise`.<`void`>
+► **eachAsync**(array: *`any`[]*, iteratee: *`Function`*): `Promise`.<`void`>
 
 
 
@@ -69,7 +69,7 @@ await eachAsync([1, 2], value => { const result = await asyncFn(value) console.l
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The array to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function). |
 
 
 
@@ -88,7 +88,7 @@ ___
 
 ###  eachRightAsync
 
-► **eachRightAsync**(array: *`any`[]*, fn: *`Function`*): `Promise`.<`void`>
+► **eachRightAsync**(array: *`any`[]*, iteratee: *`Function`*): `Promise`.<`void`>
 
 
 
@@ -109,7 +109,7 @@ await eachRightAsync([1, 2], value => { const result = await asyncFn(value) cons
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The array to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function). |
 
 
 
@@ -128,7 +128,7 @@ ___
 
 ###  mapAsync
 
-► **mapAsync**(array: *`any`[]*, fn: *`Function`*): `Promise`.<`any`[]>
+► **mapAsync**(array: *`any`[]*, iteratee: *`Function`*): `Promise`.<`any`[]>
 
 
 
@@ -149,7 +149,7 @@ await mapAsync([4, 8], square) // => [16, 64]
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The array to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function) |
 
 
 
@@ -168,7 +168,7 @@ ___
 
 ###  mapRightAsync
 
-► **mapRightAsync**(array: *`any`[]*, fn: *`Function`*): `Promise`.<`any`[]>
+► **mapRightAsync**(array: *`any`[]*, iteratee: *`Function`*): `Promise`.<`any`[]>
 
 
 
@@ -189,7 +189,7 @@ await mapRightAsync([4, 8], square) // => [64, 16]
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The array to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function) |
 
 
 
@@ -208,7 +208,7 @@ ___
 
 ###  reduceAsync
 
-► **reduceAsync**(array: *`any`[]*, fn: *`Function`*, accumulator?: *`any`*): `Promise`.<`any`>
+► **reduceAsync**(array: *`any`[]*, iteratee: *`Function`*, accumulator?: *`any`*): `Promise`.<`any`>
 
 
 
@@ -229,7 +229,7 @@ await reduceAsync({ 'a': 1, 'b': 2, 'c': 1 }, async (result, value, key) => { (r
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The collection to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function) |
 | accumulator | `any`   |  - |
 
 
@@ -249,7 +249,7 @@ ___
 
 ###  reduceRightAsync
 
-► **reduceRightAsync**(array: *`any`[]*, fn: *`Function`*, accumulator?: *`any`*): `Promise`.<`any`>
+► **reduceRightAsync**(array: *`any`[]*, iteratee: *`Function`*, accumulator?: *`any`*): `Promise`.<`any`>
 
 
 
@@ -268,7 +268,7 @@ Reduces `collection` in reverse order to a value which is the accumulated result
 | Param | Type | Description |
 | ------ | ------ | ------ |
 | array | `any`[]   |  The collection to iterate over. |
-| fn | `Function`   |  - |
+| iteratee | `Function`   |  The function invoked per iteration. (It may be async function) |
 | accumulator | `any`   |  - |
 
 
@@ -283,6 +283,9 @@ Returns the accumulated value.
 
 
 ___
+
+
+
 
 
 
