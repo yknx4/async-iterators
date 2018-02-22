@@ -20,13 +20,13 @@ This project is intended to be used with v8.9 (LTS Carbon) release of [Node.js][
 
 ### Install with yarn
 ```sh
-yarn add async-iterators
+yarn add async-function-iterators
 ```
 
 ### Install with npm 
 
 ```sh
-npm install --save async-iterators
+npm install --save async-function-iterators
 ```
 
 ## Docs
@@ -311,9 +311,9 @@ Licensed under the Apache-2.0. See the [LICENSE](https://github.com/yknx4/async-
 [license-badge]: https://img.shields.io/badge/license-APLv2-blue.svg
 [license]: https://github.com/yknx4/async-iterators/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg
-[prs]: http://makeapullrequest.com
+[prs]: https://github.com/yknx4/async-iterators/compare
 [donate-badge]: https://img.shields.io/badge/$-support-green.svg
-[donate]: http://bit.ly/donate-js
+[donate]: https://paypal.me/yknx4
 [github-watch-badge]: https://img.shields.io/github/watchers/yknx4/async-iterators.svg?style=social
 [github-watch]: https://github.com/yknx4/async-iterators/watchers
 [github-star-badge]: https://img.shields.io/github/stars/yknx4/async-iterators.svg?style=social
