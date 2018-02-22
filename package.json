@@ -50,11 +50,8 @@
     "tslib": "~1.9.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,js,json,md}": [
-      "prettier --write",
-      "npm run lint --fix",
-      "git add"
-    ],
+    "src/**/*.{ts,js}": ["prettier --write", "npm run lint --fix", "git add"],
+    "src/**/*.{json,md}": ["prettier --write", "git add"],
     "**/*.{json,md}": ["prettier --write", "git add"]
   }
 }
