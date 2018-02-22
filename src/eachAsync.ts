@@ -17,10 +17,10 @@
  * })
  * // => Logs `2` then `4`.
  */
-async function eachAsync(array: any[], fn: Function): Promise<void> {
+async function eachAsync(array: any[], iteratee: Function): Promise<void> {
   const length = array.length;
   for (var index: number = 0; index < length; index += 1) {
-    await fn(array[index], index, array);
+    await iteratee(array[index], index, array);
   }
 }
 export { eachAsync };

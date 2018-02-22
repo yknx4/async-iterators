@@ -19,12 +19,12 @@
  */
 async function reduceRightAsync(
   array: any[],
-  fn: Function,
+  iteratee: Function,
   accumulator?: any,
 ): Promise<any> {
   let result = accumulator || array[0];
   for (var index = array.length - 1; index >= 0; index -= 1) {
-    result = await fn(result, array[index], index, array);
+    result = await iteratee(result, array[index], index, array);
   }
 
   return result;
