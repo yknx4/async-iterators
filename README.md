@@ -20,13 +20,13 @@ This project is intended to be used with v8.9 (LTS Carbon) release of [Node.js][
 
 ### Install with yarn
 ```sh
-yarn add async-iterators
+yarn add async-function-iterators
 ```
 
 ### Install with npm 
 
 ```sh
-npm install --save async-iterators
+npm install --save async-function-iterators
 ```
 
 ## Docs
