@@ -25,9 +25,9 @@
     "typescript": "~2.7.1"
   },
   "scripts": {
-    "prepare": "npm run test && npm run build && rm -rf lib/*.test.*",
+    "prepare": "npm run clean && npm run test && npm run build && rm -rf lib/*.test.*",
     "precommit": "lint-staged",
-    "clean": "rimraf coverage build tmp",
+    "clean": "rimraf coverage build tmp src/index.ts typings",
     "prebuild": "npm run generate-barrels",
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
