@@ -1,0 +1,13 @@
+src
+doc
+.git
+.vscode
+.editorconfig
+.gitignore
+.prettierrc.js
+.travis.yml
+jest.config.js
+preprocessor.js
+tsconfig.json
+tsconfig.release.json
+tslint.json
