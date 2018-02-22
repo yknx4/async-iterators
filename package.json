@@ -34,7 +34,7 @@
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
     "generate-barrels": "barrelsby --delete -d src/",
-    "doc": "npx typedoc src/ --out doc/"
+    "doc": "npx typedoc --exclude \"src/**/*+(index|.test).ts\" --name async-iterators --out doc/ --module commonjs --target es6 --theme minimal src/"
   },
   "author": "Ale Figueroa  <me@ale.world>",
   "license": "Apache-2.0",
