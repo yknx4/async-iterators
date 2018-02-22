@@ -1,6 +1,6 @@
 {
   "name": "async-iterators",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Iterator functions for async functions (or Promise)",
   "engineStrict": true,
   "engines": {
@@ -24,6 +24,7 @@
     "typescript": "~2.7.1"
   },
   "scripts": {
+    "prepublish": "npm install && npm run test && npm run build && rm -rf lib/*.test.*",
     "precommit": "lint-staged",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run generate-barrels",
