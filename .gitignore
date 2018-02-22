@@ -27,3 +27,6 @@ lib/
 
 # Misc
 .DS_Store
+
+# Generated docs
+doc/
