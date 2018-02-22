@@ -20,8 +20,5 @@
     "declaration": true,
     "pretty": true
   },
-  "include": [
-    "src/**/*",
-    "__tests__/**/*"
-  ]
+  "include": ["src/**/*"]
 }

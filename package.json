@@ -11,7 +11,10 @@
     "@types/jest": "~22.1.1",
     "@types/node": "~8.5.10",
     "barrelsby": "0.0.8",
+    "husky": "^0.14.3",
     "jest": "~22.1.4",
+    "lint-staged": "^7.0.0",
+    "prettier": "1.10.2",
     "rimraf": "~2.6.2",
     "tslint": "~5.9.1",
     "tslint-microsoft-contrib": "~5.0.2",
@@ -20,6 +23,7 @@
     "typescript": "~2.7.1"
   },
   "scripts": {
+    "precommit": "lint-staged",
     "clean": "rimraf coverage build tmp",
     "prebuild": "npm run doc",
     "build": "tsc -p tsconfig.release.json",
@@ -44,5 +48,9 @@
   "homepage": "https://github.com/yknx4/async-iterators#readme",
   "dependencies": {
     "tslib": "~1.9.0"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,js,json,md}": ["prettier --write", "git add"],
+    "**/*.{json,md}": ["prettier --write", "git add"]
   }
 }
