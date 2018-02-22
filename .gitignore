@@ -31,3 +31,5 @@ typings/
 
 # Generated docs
 doc/
+
+src/index.ts
