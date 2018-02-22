@@ -1,4 +1,4 @@
-/* tslint:disable:no-unsafe-any
+// tslint:disable:no-unsafe-any
 /**
  * Reduces `collection` to a value which is the accumulated result of running
  * each element in `collection` thru `iteratee` and awaited, where each successive
@@ -7,10 +7,10 @@
  * value. The iteratee is invoked with four arguments:
  * (accumulator, value, index|key, collection).
  *
- * @param {Array} array The collection to iterate over.
- * @param {Function} iteratee The function invoked per iteration. (It may be async function)
- * @param {*} [accumulator] The initial value.
- * @returns {*} Returns the accumulated value.
+ * @param array The collection to iterate over.
+ * @param iteratee The function invoked per iteration. (It may be async function)
+ * @param [accumulator] The initial value.
+ * @return Returns the accumulated value.
  * @see reduceRightAsync
  * @example
  *

@@ -1,11 +1,11 @@
-/* tslint:disable:no-unsafe-any
+// tslint:disable:no-unsafe-any
 /**
  * Iterates over elements of `array` and invokes `iteratee` for each element.
  * The iteratee is invoked with three arguments: (value, index|key, collection), and it is awaited if it is async.
  *
- * @param {Array} array The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration. (It may be async function).
- * @returns {Promise} Returns a Promise that resolves when all the calls have been done or rejects when the first one fails.
+ * @param array The array to iterate over.
+ * @param iteratee The function invoked per iteration. (It may be async function).
+ * @return Returns a Promise that resolves when all the calls have been done or rejects when the first one fails.
  * @see eachRightAsync
  * @example
  *
