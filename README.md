@@ -12,17 +12,7 @@
 
 # async-iterators 
 
-Minimalistic boilerplate to jump-start a [Node.js][nodejs] project in [TypeScript][typescript] [2.7][typescript-27].
-
-Provides a basic template, "batteries included":
-
-+ [TypeScript][typescript] [2.7][typescript-27] to ES6 transpilation,
-+ [TSLint][tslint] 5.x with [Microsoft recommended rules][tslint-microsoft-contrib],
-+ [Jest][jest] unit testing and code coverage,
-+ Type definitions for Node.js v8.x and Jest,
-+ [NPM scripts for common operations](#available-scripts),
-+ a simple example of TypeScript code and unit test,
-+ .editorconfig for consistent file format.
+Classic iterators (each, map, reduce) with support for Async functions (or Promise based functions). It automatically waits for functions to resolve if they are asynchronous. They work pretty much the same as lodash ones.
 
 ## Quick start
 
@@ -41,7 +31,7 @@ npm install --save async-iterators
 
 ## Docs
 
-### Functions
+### Index
 
 * [eachAsync](#eachasync)
 * [eachRightAsync](#eachrightasync)
@@ -53,7 +43,7 @@ npm install --save async-iterators
 
 
 ---
-# Functions
+### Functions
 <a id="eachasync"></a>
 
 ###  eachAsync
