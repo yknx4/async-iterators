@@ -20,6 +20,7 @@
     "tslint-microsoft-contrib": "~5.0.2",
     "tsutils": "~2.21.0",
     "typedoc": "^0.10.0",
+    "typedoc-plugin-markdown": "^1.0.14",
     "typescript": "~2.7.1"
   },
   "scripts": {
@@ -34,7 +35,7 @@
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
     "generate-barrels": "barrelsby --delete -d src/",
-    "doc": "npx typedoc --exclude \"src/**/*+(index|.test).ts\" --name async-iterators --out doc/ --module commonjs --target es6 --theme minimal src/"
+    "doc": "npx typedoc --exclude \"src/**/*+(index|.test).ts\" --name async-iterators --out doc/ --mode file --module commonjs --target es6 --theme markdown --readme none --mdHideSources src/"
   },
   "author": "Ale Figueroa  <me@ale.world>",
   "license": "Apache-2.0",
@@ -50,7 +51,14 @@
     "tslib": "~1.9.0"
   },
   "lint-staged": {
-    "src/**/*.{ts,js}": ["prettier --write", "npm run lint --fix", "git add"],
-    "**/*.{json,md}": ["prettier --write", "git add"]
+    "src/**/*.{ts,js}": [
+      "prettier --write",
+      "npm run lint --fix",
+      "git add"
+    ],
+    "**/*.{json,md}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }
