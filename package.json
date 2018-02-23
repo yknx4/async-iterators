@@ -1,6 +1,6 @@
 {
   "name": "async-function-iterators",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Iterator functions for async functions (or Promise)",
   "engineStrict": true,
   "engines": {
@@ -20,6 +20,7 @@
     "tslint": "~5.9.1",
     "tslint-microsoft-contrib": "~5.0.2",
     "tsutils": "~2.21.0",
+    "tslib": "~1.9.0",
     "typedoc": "^0.10.0",
     "typedoc-plugin-markdown": "^1.0.14",
     "typescript": "~2.7.1"
@@ -49,9 +50,6 @@
     "url": "https://github.com/yknx4/async-iterators/issues"
   },
   "homepage": "https://github.com/yknx4/async-iterators#readme",
-  "dependencies": {
-    "tslib": "~1.9.0"
-  },
   "lint-staged": {
     "src/**/*.{ts,js}": [
       "prettier --write",
