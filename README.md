@@ -14,6 +14,61 @@
 
 Classic iterators (each, map, reduce) with support for Async functions (or Promise based functions). It automatically waits for functions to resolve if they are asynchronous. They work pretty much the same as lodash ones.
 
+No dependencies! Tested on Node/LTS and Node stable!
+
+## Use case
+
+### Problem
+```javascript
+  const ids = [1,2,3,4,5...1000]
+  /** 
+   ** reallyExpensiveFetchFunction is going run as soon as you call the function
+   ** about 1000 times at the same, probably crashing/slowing your app, db, etc...
+   ** imagine with millions or records
+   **/
+  const promises = ids.map(id => reallyExpensiveAsyncFunction(id)) 
+  const result = await Promise.all(promises)
+  // result will contain a 1000 results
+```
+### Solution
+**Vanilla js #1**
+```javascript
+  const ids = [1,2,3,4,5...1000]
+  /** 
+   ** It works but it is unredable and looks hackish
+   **/
+  const result = await ids.reduce((p, id) => {
+             return p.then(id => reallyExpensiveAsyncFunction(id));
+         }, Promise.resolve())
+  // result will contain a 1000 results
+```
+**Vanilla js #2**
+```javascript
+  const ids = [1,2,3,4,5...1000]
+  /** 
+   ** It is readable, but still kind of verbose, and it gets messier when 
+   ** simulating a reduce iterator.
+   **/
+  const result = []
+  for(const id of ids) {
+    result.push(await reallyExpensiveAsyncFunction(id));
+  }
+  // result will contain a 1000 results
+```
+
+**async-iterators**
+```javascript
+  const {mapAsync} = require('async-function-iterators')
+  const ids = [1,2,3,4,5...1000]
+  /** 
+   ** same readibility and simplicity as array.map(fn) or lodash's map(array, fn)
+   ** runs the reallyExpensiveAsyncFunction in series, thus not overloading your
+   ** system 
+   **/
+  const result = await mapAsync(ids, id => reallyExpensiveAsyncFunction(id))
+  // result will contain a 1000 results
+```
+
 ## Quick start
 
 This project is intended to be used with v8.9 (LTS Carbon) release of [Node.js][nodejs] or newer 
