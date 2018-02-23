@@ -1,6 +1,6 @@
 {
   "name": "async-function-iterators",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Iterator functions for async functions (or Promise)",
   "engineStrict": true,
   "engines": {
