@@ -1,11 +1,7 @@
 {
   "name": "async-function-iterators",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Iterator functions for async functions (or Promise)",
-  "engineStrict": true,
-  "engines": {
-    "node": ">= 8.9.0"
-  },
   "main": "lib/index.js",
   "devDependencies": {
     "@types/jest": "^22.1.3",
