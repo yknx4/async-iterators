@@ -2,6 +2,7 @@
 [![Node.js version][nodejs-badge]][nodejs]
 [![NPM version][npm-badge]][npm]
 [![Build Status][travis-badge]][travis-ci]
+[![Coverage Status](https://coveralls.io/repos/github/yknx4/async-iterators/badge.svg?branch=master)](https://coveralls.io/github/yknx4/async-iterators?branch=master)
 
 [![Apache-2.0][license-badge]][LICENSE]
 [![PRs Welcome][prs-badge]][prs]
