@@ -72,7 +72,7 @@ No dependencies! Tested on Node/LTS and Node stable!
 
 ## Quick start
 
-This project is intended to be used with v7.10.1 (requires support for async/await) release of [Node.js][nodejs] or newer 
+This project is intended to be used with >=v8 (requires support for async/await) release of [Node.js][nodejs] or newer 
 
 ### Install with yarn
 ```sh
