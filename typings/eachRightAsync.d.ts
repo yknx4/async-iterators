@@ -16,5 +16,5 @@
  * })
  * // => Logs `4` then `2`.
  */
-declare function eachRightAsync(array: any[], iteratee: Function): Promise<void>;
+declare function eachRightAsync<T = any>(array: T[], iteratee: (input: T, index: number, array: T[]) => Promise<any> | any): Promise<void>;
 export { eachRightAsync };

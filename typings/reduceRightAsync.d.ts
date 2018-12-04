@@ -16,5 +16,5 @@
  * await reduceRightAsync(array, async (flattened, other) => flattened.concat(other), [])
  * // => [4, 5, 2, 3, 0, 1]
  */
-declare function reduceRightAsync(array: any[], iteratee: Function, accumulator?: any): Promise<any>;
+declare function reduceRightAsync<T, R>(array: T[], iteratee: (acc: Partial<R>, input: T, index: number, array: T[]) => Partial<R> | Promise<Partial<R>>, accumulator?: R): Promise<R>;
 export { reduceRightAsync };

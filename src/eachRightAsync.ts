@@ -17,7 +17,10 @@
  * })
  * // => Logs `4` then `2`.
  */
-async function eachRightAsync(array: any[], iteratee: Function): Promise<void> {
+async function eachRightAsync<T = any>(
+  array: T[],
+  iteratee: (input: T, index: number, array: T[]) => Promise<any> | any,
+): Promise<void> {
   for (var index = array.length - 1; index >= 0; index -= 1) {
     await iteratee(array[index], index, array);
   }

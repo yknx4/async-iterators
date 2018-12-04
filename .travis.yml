@@ -2,6 +2,7 @@ language: node_js
 node_js:
 - "lts/*"
 - "node"
+- "8"
 cache:
   directories:
     - "node_modules"
@@ -11,6 +12,8 @@ deploy:
   api_key:
     secure: jK1HuZqNqVZxPr6V8hCx3f4Nbh4GYu6Yn+oRbUKeNVhJ4Xsrce9u0GHeX/vr9V4E3iHrp5GfVnUHST7oX7TMOB9OgXvLs5OgRUOnWuaYPdqRDSUCFyYLbtRVOkC0N87CSCQDmuKreodSXti6JE1hXq6BuPIt8grsxD/nxS1gaJ9elCrtXDpSlqBCvq1XJB9ncdpcHkVpnOaWWE1TW3EUf//HOB1AK5PJFsBej+bxG4tCwnDmKPcB1TRN/nUorJeDwggFVUr++XYGuq3oQ7D2+FGn+CwwrOibjbLfjHRif++et1ZkO/VhOSvCAz+eFIdJXcWFYNEThr1rrbCtOULa2tQL0RaDpcegTxAkw5mVY22x7SY9NEGJmbuFPXfmTlNdbxJyqSm67LNJS0bw9g1iudrFElFC7dwVg4XD3L3JE+MzXQMAy+dH0dUykOaCX2tOKbtZoJwVJ/9JVehkNER21+P3IBvCTtOLfiXgZxmJdxE4BbE7nslEeYrXODigQblZcVgSioD5M/LivNcsvgJpVoCU3eiPRZjEIhMyYk7+mMW4eRJSr+PZ5ZBpWhkidHcYqv+7mIQCJqIKdZLFNwYQAictJ4QuArUaQf3FBNvaN3f+uM9Q4AU2WpUe5MywwVMgWmaD0Cz2bP24fh4xpgR2GeKuIsZnnT5l74ua1gMr3LM=
   on:
+    branch: master
+    node: "lts/*"
     tags: true
     repo: yknx4/async-iterators
 before_install:

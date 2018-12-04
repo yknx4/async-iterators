@@ -16,9 +16,12 @@
  * await mapRightAsync([4, 8], square)
  * // => [64, 16]
  */
-async function mapRightAsync(array: any[], iteratee: Function): Promise<any[]> {
+async function mapRightAsync<T = any, P = any>(
+  array: P[],
+  iteratee: (input: P, index: number, array: P[]) => Promise<T> | T,
+): Promise<T[]> {
+  const result: T[] = [];
   const length = array.length;
-  const result: any[] = [];
   for (var index = length - 1; index >= 0; index -= 1) {
     result.push(await iteratee(array[index], index, array));
   }

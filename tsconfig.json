@@ -1,28 +1,23 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
     "target": "es2017",
     "module": "commonjs",
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "jsx": "preserve",
     "allowJs": false,
     "importHelpers": false,
     "alwaysStrict": true,
     "sourceMap": true,
-    "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitReturns": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
     "noEmitHelpers": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
-    "strictNullChecks": true,
+    "strict": true,
     "declaration": true,
     "pretty": true,
     "lib": [
       "es2017"
     ]
   },
-  "include": ["src/**/*.ts"],
+  "include": [
+    "src/**/*.ts"
+  ]
 }

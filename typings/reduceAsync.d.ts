@@ -22,5 +22,5 @@
  * }, {})
  * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
  */
-declare function reduceAsync(array: any[], iteratee: Function, accumulator?: any): Promise<any>;
+declare function reduceAsync<T, R>(array: T[], iteratee: (acc: Partial<R>, input: T, index: number, array: T[]) => Partial<R> | Promise<Partial<R>>, accumulator?: R): Promise<R>;
 export { reduceAsync };
