@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "acorn": "^6.0.4",
+    "callsites": "^3.0.0",
     "eslint": "^5.9.0"
   }
 }
