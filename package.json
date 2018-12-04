@@ -32,7 +32,7 @@
     "prebuild": "npm run generate-barrels",
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
-    "lint": "tslint --fix --project tsconfig.release.json -c tslint.json *.ts",
+    "lint": "tslint --fix --project tsconfig.json -c tslint.json *.ts",
     "pretest": "npm run lint",
     "test": "npm run test-only",
     "test-only": "jest --coverage",

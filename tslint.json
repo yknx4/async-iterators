@@ -1,3 +1,8 @@
 {
-  "extends": ["tslint-sonarts", "tslint-config-standard"]
+  "extends": ["tslint-sonarts", "tslint-config-standard"],
+  "rules": {
+    "no-identical-functions": {
+      "severity": "warning"
+    }
+  }
 }
