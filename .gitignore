@@ -27,5 +27,3 @@ coverage
 
 # Generated docs
 doc/
-
-src/index.ts
