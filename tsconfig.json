@@ -15,8 +15,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noEmitHelpers": true,
-    "noImplicitAny": false,
-    "noImplicitThis": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
     "strictNullChecks": true,
     "declaration": true,
     "pretty": true,
@@ -24,5 +24,7 @@
       "es2017"
     ]
   },
-  "include": ["src/**/*.ts"],
+  "include": [
+    "src/**/*.ts"
+  ]
 }
