@@ -7,19 +7,23 @@
     "@types/jest": "~22.2.3",
     "@types/node": "~8.5.10",
     "barrelsby": "~0.0.8",
+    "eslint-plugin-typescript": "^0.14.0",
     "husky": "~0.14.3",
     "jest": "^23.6.0",
     "lint-staged": "~7.3.0",
-    "prettier": "~1.10.2",
     "rimraf": "~2.6.2",
     "ts-jest": "^23.10.5",
     "tslib": "~1.9.3",
-    "tslint": "^5.11.0",
-    "tslint-microsoft-contrib": "^6.0.0",
     "tsutils": "~2.21.2",
     "typedoc": "~0.10.0",
     "typedoc-plugin-markdown": "~1.1.19",
-    "typescript": "^3.2.1"
+    "typescript": "^3.2.1",
+    "typescript-eslint-parser": "^21.0.2",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^7.1.0",
+    "tslint-no-circular-imports": "^0.5.2",
+    "tslint-sonarts": "^1.8.0",
+    "prettier": "^1.13.7"
   },
   "scripts": {
     "prepare": "npm run clean && npm run test && npm run build && rm -rf lib/*.test.* && rm -rf typings/*.test.*",
@@ -28,7 +32,7 @@
     "prebuild": "npm run generate-barrels",
     "build": "tsc -p tsconfig.release.json",
     "watch": "tsc -w -p tsconfig.release.json",
-    "lint": "tslint --fix -t stylish --project \"tsconfig.json\"",
+    "lint": "tslint --fix --project tsconfig.release.json -c tslint.json *.ts",
     "pretest": "npm run lint",
     "test": "npm run test-only",
     "test-only": "jest --coverage",
@@ -52,5 +56,9 @@
       "npm run lint --fix",
       "git add"
     ]
+  },
+  "dependencies": {
+    "acorn": "^6.0.4",
+    "eslint": "^5.9.0"
   }
 }
