@@ -23,17 +23,23 @@
  * }, {})
  * // => { '1': ['a', 'c'], '2': ['b'] } (iteration order is not guaranteed)
  */
-async function reduceAsync(
-  array: any[],
-  iteratee: Function,
-  accumulator?: any,
-): Promise<any> {
-  let result = accumulator || array[0];
+
+async function reduceAsync<T, R>(
+  array: T[],
+  iteratee: (
+    acc: Partial<R>,
+    input: T,
+    index: number,
+    array: T[],
+  ) => Partial<R> | Promise<Partial<R>>,
+  accumulator?: R,
+): Promise<R> {
   const length = array.length;
+  let result: Partial<R> = accumulator === undefined ? array[0] : accumulator;
   for (var index = 0; index < length; index += 1) {
     result = await iteratee(result, array[index], index, array);
   }
 
-  return result;
+  return <R>result;
 }
 export { reduceAsync };

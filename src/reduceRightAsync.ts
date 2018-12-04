@@ -17,16 +17,21 @@
  * await reduceRightAsync(array, async (flattened, other) => flattened.concat(other), [])
  * // => [4, 5, 2, 3, 0, 1]
  */
-async function reduceRightAsync(
-  array: any[],
-  iteratee: Function,
-  accumulator?: any,
-): Promise<any> {
-  let result = accumulator || array[0];
+async function reduceRightAsync<T, R>(
+  array: T[],
+  iteratee: (
+    acc: Partial<R>,
+    input: T,
+    index: number,
+    array: T[],
+  ) => Partial<R> | Promise<Partial<R>>,
+  accumulator?: R,
+): Promise<R> {
+  let result: Partial<R> = accumulator === undefined ? array[0] : accumulator;
   for (var index = array.length - 1; index >= 0; index -= 1) {
     result = await iteratee(result, array[index], index, array);
   }
 
-  return result;
+  return <R>result;
 }
 export { reduceRightAsync };

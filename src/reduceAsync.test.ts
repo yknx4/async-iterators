@@ -15,7 +15,7 @@ describe('reduceAsync', () => {
     expect(result).toEqual(16);
   });
   it('should wait for async functions', async () => {
-    const fn = jest.fn(async (acc: object, i: number) => {
+    const fn = jest.fn(async (acc: { [key: string]: number }, i: number) => {
       acc[`${i}`] = i;
 
       return acc;
@@ -24,7 +24,7 @@ describe('reduceAsync', () => {
     expect(result).toEqual({ 1: 1, 2: 2, 3: 3, 4: 4, 5: 5 });
   });
   it('should work for non-async functions', async () => {
-    const fn = jest.fn((acc: object, i: number) => {
+    const fn = jest.fn((acc: { [key: string]: number }, i: number) => {
       acc[`${i}`] = i;
 
       return acc;
@@ -33,7 +33,7 @@ describe('reduceAsync', () => {
     expect(result).toEqual({ 1: 1, 2: 2, 3: 3, 4: 4, 5: 5 });
   });
   it('should resolve promises before returning', async () => {
-    const fn = jest.fn((acc: object, i: number) => {
+    const fn = jest.fn((acc: { [key: string]: number }, i: number) => {
       acc[`${i}`] = i * i;
       if (i % 2 === 0) {
         return Promise.resolve(acc);
