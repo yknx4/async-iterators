@@ -37,7 +37,7 @@
     "test": "npm run test-only",
     "test-only": "jest --coverage",
     "test:watch": "jest --watch",
-    "generate-barrels": "barrelsby --delete -d src/",
+    "generate-barrels": "barrelsby --delete -d src/ -e \"(/__tests__/.*|(\\.|/)(test|spec))\\.ts$\"",
     "doc": "npx typedoc --exclude \"src/**/*+(index|.test).ts\" --name async-iterators --out doc/ --mode file --module commonjs --target es6 --theme markdown --readme none --mdHideSources src/"
   },
   "author": "Ale Figueroa  <me@ale.world>",
