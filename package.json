@@ -1,6 +1,6 @@
 {
   "name": "async-function-iterators",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Iterator functions for async functions (or Promise)",
   "main": "lib/index.js",
   "devDependencies": {
